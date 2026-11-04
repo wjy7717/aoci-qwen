@@ -1,0 +1,20 @@
+{
+  "name": "aoci-code",
+  "displayName": {
+    "en": "AOCI Code Cognition",
+    "zh": "AOCI 代码认知"
+  },
+  "description": {
+    "en": "Connects Qwen Code to a local AOCI MCP server so the agent reads and maintains a repository's governed cognition index.",
+    "zh": "把 Qwen Code 接入本机 AOCI MCP 服务，让 Agent 读取并维护仓库的受治理认知索引。"
+  },
+  "version": "0.1.0",
+  "mcpServers": {
+    "aoci": {
+      "command": "${extensionPath}${/}bin${/}aoci",
+      "args": ["mcp"],
+      "cwd": "${workspacePath}",
+      "description": "Bundled AOCI 0.1.1 cognition server (stdio, linux/amd64). Requires a repository initialized with `aoci init` + `aoci scan`."
+    }
+  }
+}

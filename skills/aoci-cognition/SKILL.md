@@ -61,7 +61,7 @@ Root + Meta + 参与的对象 Volume 才是 Whole-Index。只读 `aoci.txt` 不�
 3. 完成一次普通完整 `aoci_overview`（cursor、确认、Attestation 全序列）。
 4. `check_only` 与认知 probe 不能替代这次重载。
 5. 即使 Attestation 是 `partial` 或 `fail`，也继续按 source-bound 规则执行，
-   不要自动发起第二次重载；重载被打断时按 Rules 的恢复要求重来，不要自行改配置。
+   不要自动发起第二次重载；若一次重载本身被打断，服务器会以 `capacity_stop` 答复下一次重载。
 
 ## 终态与失败恢复
 
@@ -100,4 +100,4 @@ aoci doctor               # 仓库/接入/平台三组只读诊断
 - 不用局部结果冒充完整 Overview 交付。
 - 只有 `current_system_cognition_reliable=true` 才可声称无保留掌握当前完整系统认知。
 - 数据库只读系统目录、只取表结构；不读业务数据，凭据只用环境变量名引用。
-- 默认不联网、不上传索引；认知语义由宿主模型通过 MCP 撰写。
+- 不联网、不上传索引；AOCI 没有自己的模型客户端，语义由宿主模型撰写。

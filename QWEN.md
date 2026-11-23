@@ -1,6 +1,6 @@
 # AOCI 代码认知层
 
-本扩展通过 stdio 启动随包携带的 `bin/aoci`（0.1.1，linux/amd64），为当前工作区提供 AOCI 认知工具。
+本扩展通过 stdio 启动随包携带的 `bin/aoci`（0.2.0-rc3，linux/amd64），为当前工作区提供 AOCI 认知工具。
 它只在**已初始化**的仓库里工作：仓库中必须已有 `aoci.txt` 与 `.aoci/`
 （由 `aoci init` 建立、`aoci scan` 建立基线）。
 

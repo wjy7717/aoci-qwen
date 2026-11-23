@@ -14,7 +14,7 @@
       "command": "${extensionPath}${/}bin${/}aoci",
       "args": ["mcp"],
       "cwd": "${workspacePath}",
-      "description": "Bundled AOCI 0.1.1 cognition server (stdio, linux/amd64). Requires a repository initialized with `aoci init` + `aoci scan`."
+      "description": "Bundled AOCI 0.2.0-rc3 cognition server (stdio, linux/amd64). Requires a repository initialized with `aoci init` + `aoci scan`."
     }
   }
 }
